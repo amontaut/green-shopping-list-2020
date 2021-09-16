@@ -1,0 +1,1974 @@
+/*///////////
+/*
+/*          COMMUN A PLS PAGES
+/*
+/*
+////////////*/
+
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+
+h3 {
+    font-family: 'Sulphur Point', sans-serif, cursive;
+    width: 50%;
+    margin: auto;
+    background: #85d16d;
+    box-shadow: black 20px 20px 0px;
+    padding: 1%;
+    font-size: 3.5rem;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+h4 {
+    font-family: 'Poiret One', sans-serif, cursive;
+    font-size: 2rem;
+    margin: 4%;
+}
+
+p,
+label,
+li {
+    font-family: 'Raleway', sans-serif, cursive;
+}
+
+a {
+    font-family: 'Unica One', sans-serif, cursive;
+}
+
+button {
+    font-family: 'Unica One', sans-serif, cursive;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*///////////
+/*
+/*          FIN COMMUN
+/*
+/*
+////////////*/
+
+/*///////////
+/*
+/*          TEMPLATE - CONNEXION ETC
+/*
+/*
+////////////*/
+
+/*header*/
+header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.5% 0%;
+    align-items: center;
+    background: white;
+    flex-wrap: wrap;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid black;
+    z-index: 1001;
+    /*pour que les boutons zoom de la carte passent dessous*/
+}
+
+header a,
+footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0.5%;
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+#myNav {
+    width: 100%;
+}
+
+.header_burger {
+    background: white;
+    height: 65px;
+    width: 100%;
+    z-index: 1005;
+}
+
+.front,
+.back {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 1% 0%;
+    box-shadow: black 0px 2px 13px;
+}
+
+.btn_co,
+.changer_mdp,
+.btn_deco,
+.btn_page_admin,
+.btn_marques_pref {
+    background: none;
+    font-size: 1em;
+    border: 1px solid black;
+    box-shadow: black 2px 2px;
+    cursor: pointer;
+    margin: 0.5%;
+    padding: 0.3%;
+}
+
+.btn_co:hover,
+.changer_mdp:hover,
+.btn_deco:hover,
+.btn_deco a:hover,
+.btn_page_admin:hover,
+.btn_marques_pref:hover {
+    color: white;
+    background: black;
+    box-shadow: none;
+    /*    text-decoration: none;*/
+}
+
+.cadre_nvx_compte,
+.cadre_co,
+.cadre_mdp_oublie,
+.cadre_changement_mdp {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    z-index: 1003;
+    top: 0;
+}
+
+.txt_cadre_co,
+.txt_nvx_compte,
+.txt_mdp_oublie,
+.txt_changement_mdp {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 2%;
+    background: #C4D8BE;
+    border: 5px solid white;
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.champs_email_mdp {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+}
+
+.champs_email_co,
+.champs_mdp_co {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.champs_email_co input,
+.champs_mdp_co input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.submit_co,
+.nvx_compte,
+.submit_pwd_forgotten,
+.valider_changement_mdp {
+    font-size: 1em;
+    display: flex;
+    margin: auto;
+    width: auto;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-family: 'Raleway', sans-serif, cursive;
+    background: #E5E5E5;
+    border: 1px solid black;
+    padding: 0.8%;
+    box-shadow: black 2px 2Px;
+    cursor: pointer;
+}
+
+.nvx_compte {
+    display: none;
+}
+
+
+.h4_cadre_co,
+.h4_mdp_oublie,
+.h4_nvx_compte,
+.h4_chgmt_mdp {
+    margin: 2% 0%;
+}
+
+.cadre_changement_mdp,
+.cadre_mdp_oublie {
+    display: none;
+}
+
+.btn_cadre_co {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.btn_cadre_co button,
+.fermer_nvx_compte,
+.fermer_mdp_oublie,
+.fermer_changer_mdp {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif, cursive;
+    padding: 0.8%;
+    border: 1px solid black;
+    box-shadow: grey 1px 1px 5px 1px;
+    cursor: pointer;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.btn_cadre_co button:hover,
+.fermer_nvx_compte:hover,
+.fermer_mdp_oublie:hover,
+.fermer_changer_mdp:hover {
+    font-weight: bold;
+}
+
+.creer_compte {
+    background: rgb(107, 167, 88);
+}
+
+.btn_mdp_oublie {
+    background: rgb(225, 144, 5);
+}
+
+.fermer_co,
+.fermer_nvx_compte,
+.fermer_mdp_oublie,
+.fermer_changer_mdp {
+    background: rgb(216, 90, 82);
+}
+
+.fermer_nvx_compte,
+.fermer_mdp_oublie,
+.fermer_changer_mdp {
+    display: flex;
+    margin: auto;
+}
+
+
+.all_mail_nvx_compte,
+.all_mdp_nvx_compte,
+.all_mdp_nvx_mdp {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.mail_nvx_compte,
+.confirm_mail_nvx_compte,
+.mdp_nvx_compte,
+.confirm_mdp_nvx_compte,
+.chgmt_nvx_mdp,
+.confirm_chgmt_nvx_mdp {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.mail_nvx_compte input,
+.confirm_mail_nvx_compte input,
+.mdp_nvx_compte input,
+.confirm_mdp_nvx_compte input,
+.chgmt_nvx_mdp input,
+.confirm_chgmt_nvx_mdp input {
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+}
+
+#confirm_email {
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+}
+
+.valider_changement_mdp {
+    display: none;
+}
+
+.mdp_differents,
+.email_nvx_compte_differents,
+.mdp_nvx_compte_differents {
+    display: none;
+    margin: 0;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.menu_burger_span {
+    height: 0;
+}
+
+
+
+
+
+
+/*///////////
+/*
+/*          FIN TEMPLATE - CONNEXION ETC
+/*
+/*
+////////////*/
+
+
+
+
+
+/*///////////
+/*
+/*          PAGE ACCUEIL
+/*
+/*
+////////////*/
+
+h1 {
+    font-family: 'Sulphur Point', sans-serif;
+    margin: 5%;
+}
+
+/*commun a tous les sections*/
+.background_accueil {
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.background_accueil a {
+    transform: scale(1);
+    transition: transform 230ms ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Sulphur Point', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    margin: 5%;
+}
+
+.background_accueil a:hover {
+    transform: scale(1.15);
+}
+
+
+/*Ecran bienvenue*/
+.section_bienvenue {
+    background-image: url(images/fond%20accueil%20blanc.jpg);
+}
+
+.txt_section_bienvenue {
+    font-size: 2em;
+}
+
+.fa-angle-double-down {
+    transition: transform 330ms ease-in-out;
+    font-size: 2em;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.fa-angle-double-down:hover {
+    transform: translate(0, 3vh);
+}
+
+/*Ecran vetements*/
+.section_vetements {
+    background-image: url(images/cameleon-blanc.jpg);
+    font-size: 2em;
+    background-position: center;
+}
+
+/*Ecran SDB et cosmetiques*/
+.section_cosmetique {
+    background-image: url(images/flamand%20blanc.jpg);
+    font-size: 2em;
+    background-position: center;
+}
+
+/*Ecran maison*/
+.section_maison {
+    background-image: url(images/nid%20blanc.jpg);
+    font-size: 2em;
+    background-position: center;
+}
+
+/*Ecran animaux*/
+.section_animaux {
+    background-image: url(images/chat%20blanc.jpg);
+    font-size: 2em;
+    background-position: center;
+}
+
+/*Ecran enfants*/
+.section_enfants {
+    background-image: url(images/ours%20blanc.jpg);
+    font-size: 2em;
+    background-position: center;
+}
+
+/*Ecran déchets paris*/
+.section_dechets {
+    background-image: url(images/dechet%20blanc.jpg);
+    font-size: 2em;
+    background-position: bottom;
+}
+
+/*Ecran marchés paris*/
+.section_marches {
+    background-image: url(images/march%C3%A9%20blanc.jpg);
+    font-size: 2em;
+    background-position: center;
+}
+
+/*Ecran form de contact */
+
+h2 {
+    background: #ffbb00;
+    border: 1px solid black;
+    width: 30%;
+    padding: 0% 1%;
+    font-style: italic;
+    margin: -0.6em 0.5em;
+    text-shadow: whitesmoke 4px 1px;
+}
+
+.section_contact {
+    border: 2px solid black;
+    margin: 6% 10%;
+    background: whitesmoke;
+}
+
+.text_section_contact {
+    padding: 2% 6%;
+}
+
+.text_section_contact p {
+    text-align: justify;
+    margin-top: 2%;
+}
+
+/*FORM*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin: 1% 0%;
+    width: 100%;
+}
+
+.champs_nomprenom_email {
+    display: flex;
+    flex-direction: row;
+}
+
+.champs_email {
+    text-align: right;
+}
+
+.champs_nomprenom_email input {
+    /*seulement les champs pour entrer une valeur*/
+    background: none;
+    border: none;
+    border-bottom: black 2px solid;
+    /*    transition: background 330ms linear;*/
+}
+
+.champs_nomprenom {
+    margin-right: 5%;
+}
+
+.champs_email {
+    margin-left: 5%;
+}
+
+#msg {
+    min-height: 40px;
+    width: 99.3%;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif, cursive;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.submit_form_contact {
+    background: orange;
+    border: 1px solid black;
+    width: 100%;
+    box-shadow: black 1px 1px;
+    font-size: 1em;
+    font-family: 'Unica One', sans-serif, cursive;
+}
+
+.submit_form_contact:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/*///////////
+/*
+/*          FIN PAGE ACCUEIL
+/*
+/*
+////////////*/
+
+
+
+
+/*///////////
+/*
+/*          PAGE VETEMENTS
+/*
+/*
+////////////*/
+
+.trait_marques {
+    border: none;
+    width: 30%;
+    margin: auto;
+    height: 1px;
+    background: black;
+}
+
+.top {
+    margin-top: 7%;
+}
+
+.bottom {
+    margin-bottom: 5%;
+}
+
+.texte_page_vetements {
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.texte_page_vetements p {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    text-align: justify;
+
+}
+
+.texte_page_vetements p img {
+    margin: 0% 1.5%;
+
+}
+
+/*effet d'aparition*/
+.appear {
+    opacity: 0;
+    position: relative;
+    top: 100px;
+}
+
+.une_marque {
+    margin: 3% 1.5%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #E5E5E5;
+    border: 1px solid black;
+}
+
+.liste_marques {
+    column-count: 2;
+    padding: 0% 2%;
+    column-width: 450px;
+}
+
+.liste_marques li {
+    list-style: none;
+}
+
+.petite_desc_marque {
+    text-align: justify;
+}
+
+/*boutons d'actions sur 1 marque*/
+.actions_une_marque {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.actions_une_marque a {
+    color: black;
+    cursor: pointer;
+    font-size: 0.9em;
+
+}
+
+.actions_une_marque button {
+    font-size: 0.8em;
+    background: none;
+    border: none;
+    color: rgb(104, 104, 104);
+}
+
+.fa-heart,
+.fa-times {
+    color: red;
+}
+
+
+
+
+/*avis formulaire*/
+.laisser_avis {
+    width: 50%;
+    margin: auto;
+    display: none;
+    border: 1px solid black;
+    box-shadow: black 7px 7px;
+    padding: 3%;
+    background: #C4D8BE;
+    margin: auto;
+}
+
+/*
+.trait_form_laisser_avis {
+    border: none;
+    height: 1px;
+    background: black;
+}
+*/
+
+.h4_laisser_avis {
+    margin: 0;
+}
+
+.btn_laisser_avis {
+    width: 30%;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    font-size: 1em;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 1%;
+    box-shadow: black 3px 3px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.btn_laisser_avis:hover {
+    background: black;
+    color: white;
+    box-shadow: none;
+}
+
+.indication_form_laisser_avis {
+    font-size: 0.8rem;
+    margin-top: 0.5%;
+}
+
+.laisser_avis:focus {
+    box-shadow: none;
+}
+
+.laisser_avis:active {
+    box-shadow: none;
+}
+
+.laisser_avis:hover {
+    box-shadow: none;
+}
+
+.fermer_avis {
+    display: none;
+}
+
+.h4_avis_laisses {
+    margin: 4% 0% 0% 0%;
+    width: 100%;
+    display: none;
+}
+
+.nom_prenom_laisser_avis input,
+.note_laisser_avis input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#msg_avis {
+    border: 1px solid black;
+    background: white;
+    min-height: 40px;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif, cursive;
+}
+
+.submit_avis {
+    border: 1px solid black;
+    margin: 1.3% 2px;
+    font-size: 1em;
+    font-family: 'Unica One', sans-serif, cursive;
+    cursor: pointer;
+}
+
+.fermer_form_laisser_avis {
+    width: 100%;
+    font-size: 0.9em;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.un_avis {
+    padding: 1.5%;
+    /*    display: none;*/
+    width: 90%;
+    border: 1px solid black;
+    border-top: none;
+    background: #C4D8BE;
+    margin: auto
+}
+
+.site_internet_marque {
+    font-family: 'Raleway', sans-serif, cursive;
+    font-style: italic;
+}
+
+.img_logo_marque {
+    height: auto;
+    width: 40%;
+    margin: 2%;
+}
+
+.img_logo_marque img {
+    height: auto;
+    width: 100%;
+}
+
+.sigles_marque {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+
+.img_sigles_marque {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_sigles_marque img {
+    height: auto;
+    width: 70%;
+}
+
+
+/*
+.de_WeDressFair {
+    background: red;
+}
+*/
+
+
+
+
+
+/*///////////
+/*
+/*          FIN PAGE VETEMENTS
+/*
+/*
+////////////*/
+
+
+
+
+
+
+/*///////////
+/*
+/*           PAGE FAV
+/*
+/*
+////////////*/
+
+.une_colonne {
+    display: inline-block;
+    width: 100%;
+}
+
+.titre_marques_fav {
+    margin: 5% 4% 2%;
+}
+
+.un_vetementsfav {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 2%;
+    border: 1px solid black;
+    margin: 4% 1.5%;
+    box-shadow: grey 1px 1px 4px 1px;
+}
+
+.un_vetementsfav:hover {
+    box-shadow: none;
+}
+
+.id_marque_fav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.id_marque_fav img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+.btn_marques_fav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2% 0%;
+}
+
+.btn_marques_fav a {
+    color: black;
+    cursor: pointer;
+    margin: 0;
+}
+
+.btn_marques_fav button {
+    font-size: 1em;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn_supp_fav {
+    text-align: center;
+    margin: 3% 0%;
+    color: black;
+    cursor: pointer;
+}
+
+.liste_marques_fav {
+    padding: 0 2%;
+    column-count: 2;
+    list-style: none;
+    column-width: 450px;
+}
+
+.aPropos_fav {
+    margin: 3% 0%;
+    flex-direction: column;
+    color: black;
+    cursor: pointer;
+    display: flex;
+}
+
+.aPropos_fav p {
+    margin: 1% 2%;
+    text-align: justify;
+}
+
+/*///////////
+/*
+/*           FIN PAGE FAV
+/*
+/*
+////////////*/
+
+
+
+
+
+
+
+
+
+
+
+/*///////////
+/*
+/*          PAGE DECHETS A PARIS
+/*
+/*
+////////////*/
+
+/*
+.titre_page_dechets_paris {
+    margin: 0;
+    padding: 5% 0%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(images/background%20dechet%20cropped%20white.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+*/
+
+.trait_dechets {
+    width: 30%;
+    margin: 0;
+    border: none;
+    height: 1px;
+    background: black;
+}
+
+.introtxt_page_dechets,
+.introtxt_page_marche,
+.introtxt_page_MIF,
+.introtxt_page_OD,
+.introtxt_page_fav {
+    width: 50%;
+    margin: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    font-style: italic;
+    text-align: justify;
+}
+
+.ancre_textile,
+.ancre_composte,
+.ancre_trimobile,
+.ancre_memo_tri,
+.ancre_calendrier_fl {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ancre_textile:hover,
+.ancre_composte:hover,
+.ancre_trimobile:hover,
+.ancre_memo_tri:hover,
+.ancre_calendrier_fl:hover {
+    font-weight: bold;
+}
+
+
+
+.h4_sstitre_textile,
+.h4_sstitre_composte,
+.h4_sstitre_trimobile,
+.h4_sstitre_memo_tri {
+    margin: 2% 0%;
+}
+
+.banniere_textile {
+    min-height: 65%;
+    background-image: url(images/background%20textile%20cropped%20white.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.banniere_composte {
+    min-height: 65%;
+    background-image: url(images/chandra-oh-nSoj6ufj1Ws-unsplash%20-%20copie.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.banniere_trimobile {
+    min-height: 65%;
+    background-image: url(images/background%20trimobile%20cropped%20white.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.expl_textile,
+.expl_composte,
+.expl_trimobile,
+.expl_memo_tri,
+.calendrier_fl {
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.expl_memo_tri,
+.calendrier_fl {
+    margin-bottom: 5%;
+}
+
+.expl_memo_tri p,
+.calendrier_fl p {
+    margin: 4% 0%;
+}
+
+h5 {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    font-family: 'Raleway', sans-serif, cursive;
+}
+
+.ok_compost,
+.ok_trimobile {
+    border: 2px solid #008000;
+    border-radius: 10px;
+    padding: 1% 2%;
+    margin: 1% 0%;
+}
+
+.ok_compost h5,
+.ok_trimobile h5 {
+    color: #008000;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.nok_compost,
+.nok_trimobile {
+    border: 2px solid #FF0000;
+    border-radius: 10px;
+    padding: 1% 2%;
+    margin: 1% 0%;
+}
+
+.nok_compost h5,
+.nok_trimobile h5 {
+    color: #FF0000;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.liste_dechets {
+    column-count: 2;
+    column-width: 250px;
+    column-gap: 75px;
+    list-style: circle;
+    padding-left: 5%;
+    margin: 1% 2%;
+}
+
+img {
+    height: 50px;
+}
+
+.visible {
+    font-size: 1em;
+    width: 10%;
+    background: none;
+    border: 1px solid black;
+    margin: auto;
+    box-shadow: black 2px 2px;
+    cursor: pointer;
+}
+
+.visible:hover {
+    box-shadow: none;
+}
+
+.form_filtrage_dechets,
+.form_filtrage_marche {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 2%;
+    box-shadow: grey 1px 1px 4px 1px;
+    background: #E5E5E5;
+}
+
+.filtrez_dechets,
+.filtrer_jours_accueil,
+.filtrez_marche {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.btn_checkbox_filtre,
+.tlj_accueil_trimobile,
+.tlj_accueil_marche {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2% 0%;
+
+}
+
+.tlj_accueil_trimobile,
+.tlj_accueil_marche {
+    width: 100%;
+}
+
+.plus_infos_dechets {
+    width: 90%;
+    margin: auto;
+    font-style: italic;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+/*
+/*cadre détail marker LE RELAI, composteur et trimobile etc
+*/
+.detail_marker_lerelai,
+.detail_marker_composteur,
+.detail_marker_trimobile,
+.detail_marker_marche {
+    display: none;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 2%;
+    box-shadow: grey 1px 1px 4px 1px;
+    background: #E5E5E5;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.fermer_detail_lerelai,
+.fermer_detail_composteur,
+.fermer_detail_trimobile,
+.fermer_detail_marker {
+    font-size: 0.9em;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.plusdetaillerelai,
+.plusdetailcomposteur,
+.plusdetailtrimobile,
+.plusdetailmarche {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+/*
+/*cadre détail marker MARCHÉs
+*/
+.detail_marker_marche {
+    display: none;
+}
+
+.cadre_carte {
+    background-image: url(images/carteN&B%20black.png);
+    padding: 9% 5%;
+    margin-top: 5%;
+    background-size: cover;
+}
+
+#carte {
+    /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+    width: 80%;
+    height: 490px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.img_memo_tri {
+    width: auto;
+    height: 100%;
+}
+
+.img_calendrier_fl {
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.img_memo_tri img {
+    height: auto;
+    width: 100%
+}
+
+.img_calendrier_fl img {
+    height: auto;
+    width: 70%;
+}
+
+
+/*///////////
+/*
+/*          FIN PAGE DECHETS A PANAME
+/*
+/*
+////////////*/
+
+
+
+
+
+
+
+/*///////////
+/*
+/*          PAGE MARCHÉS A PANAME
+/*
+/*
+////////////*/
+
+/*
+/*cadre détail marker TRIMOBILE
+*/
+.detail_marker_marche {
+    display: none;
+}
+
+/*///////////
+/*
+/*          FIN PAGE MARCHÉS A PANAME
+/*
+/*
+////////////*/
+
+
+
+
+
+
+/*///////////
+/*
+/*          PAGE TOUTE LES MARQUES/MIF/0dechets
+/*
+/*
+////////////*/
+
+.liste_tt_marques {
+    column-count: 4;
+    column-width: 200px;
+    list-style: circle;
+    margin: 9%;
+}
+
+.liste_tt_marques li {
+    line-height: 2;
+}
+
+
+.introtxt_page_MIF,
+.introtxt_page_OD {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.introtxt_page_MIF img {
+    margin: 0% 1.5%;
+}
+
+.introtxt_page_OD img {
+    margin: 0% 1.5%;
+}
+
+
+
+
+
+
+
+
+
+.txt_mentions_leg {
+    margin: 10%;
+}
+
+.txt_mentions_leg h4 {
+    margin: 2% 0%;
+}
+
+.txt_mentions_leg p {
+    text-align: justify;
+}
+
+
+
+
+.tout {
+    z-index: 6;
+    position: absolute;
+}
+
+.note_nombre {
+    font-style: italic;
+    margin: 2% 0%;
+}
+
+.note_nombre p:nth-child(1) {
+    margin: 1% 0;
+}
+
+.note_nombre p:nth-child(2) {
+    margin: 1% 0 3%;
+}
+
+.note_nombre span {
+    font-weight: bold;
+}
+
+.background_avis {
+    background: rgba(0, 0, 0, .6);
+    height: 100%;
+    /* position: absolute; */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+}
+
+.titre_avis_laisses {
+    margin: 3% 0%;
+}
+
+.date_publi_avis {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.avis_dela_marque {
+    background: #C4D8BE;
+    border: white solid 15px;
+    margin: 15% 9%;
+    width: 100%;
+    padding: 3%;
+}
+
+.contenu_un_avis {
+    padding: 3%;
+    border: 1px solid black;
+    background: white;
+    margin-bottom: 3%;
+    box-shadow: grey 1px 1px 4px 1px;
+}
+
+.contenu_un_avis a {
+    color: red;
+    font-size: 0.9em;
+}
+
+.fermer_avis_marque_top {
+    width: 100%;
+    text-align: right;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+    color: black;
+}
+
+.fermer_avis_marque_top a:visited {
+    color: black;
+}
+
+.fermer_avis_marque_bottom {
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+.pages_buttons {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.pages_buttons a {
+    color: black;
+}
+
+.page_acces_refuse {
+    background-image: url(images/acces%20refuse%20white.jpg);
+    margin: 0;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_acces_refuse p {
+    background: white;
+    padding: 2%;
+    border: 2px solid green;
+}
+
+.page_acces_refuse p span {
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+
+.btn_ajout_marque, .btn_modif_marque,
+.btn_supp_marque,
+.btn_supp_user,
+.btn_gerer_avis {
+    background: white;
+    font-size: 1em;
+    border: 1px solid black;
+    padding: 1%;
+    box-shadow: black 3px 3px;
+    cursor: pointer;
+}
+
+.btn_ajout_marque:hover,
+.btn_supp_marque:hover,
+.btn_supp_user:hover,
+.btn_gerer_avis:hover, .btn_modif_marque:hover {
+    background: black;
+    color: white;
+    box-shadow: none;
+}
+
+.btn_page-admin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: url(images/fond%20ciel%20original%20-%20blanc.jpg);
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: bottom;
+    border-bottom: 3px solid black;
+}
+
+.cadre_ajouter_une_marque, .cadre_modif_une_marque,
+.cadre_sup_marque,
+.cadre_gerer_users,
+.cadre_gerer_avis {
+    width: 60%;
+    border: 1px solid black;
+    box-shadow: black 7px 7px;
+    padding: 3%;
+    background: #BFD2DF;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+        display: none;
+}
+
+.form_ajout_marque input:not(.submit_ajout_marque),
+.form_sup_marque input:not(.submit_sup_marque),
+.form_sup_user input:not(.submit_sup_utilisateur), .form_modif_marque input:not(.submit_modif_marque) {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.h4_ajouter_marque, .h4_modif_marque,
+.h4_sup_marque {
+    margin: 0;
+}
+
+.indication_form_ajouter_marque, .indication_form_modif_marque,
+.indication_ajout_marque, .indication_modif_marque {
+    font-size: 0.8rem;
+    margin-top: 0.5%;
+}
+
+.submit_ajout_marque,
+.submit_sup_utilisateur,
+.submit_sup_marque, .submit_modif_marque {
+    border: 1px solid black;
+    margin: 1.3% 2px;
+    font-size: 1em;
+    font-family: 'Unica One', sans-serif, cursive;
+    cursor: pointer;
+}
+
+.fermer_cadre_ajout_marque,
+.fermer_cadre_sup_marque,
+.fermer_cadre_sup_user, .fermer_cadre_gerer_com, .fermer_cadre_modif_marque {
+    width: 100%;
+    font-size: 0.9em;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.champs_sup {
+    margin: 3% 0%;
+}
+
+.titre_avis_OK_NOK {
+    display: flex;
+    flex-direction: row;
+}
+
+.titre_avis_OK_NOK h5 {
+    width: 50%;
+    margin: 0;
+    padding: 2%;
+    margin-top: 2%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.avisOK,
+.avisNOK {
+    list-style: none;
+    padding: 0;
+    column-count: 2;
+    column-width: 300px;
+    margin: 0;
+    column-rule: 1px solid black;
+    padding: 2%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.avisNOK {
+    display: none;
+}
+
+.titre_NOK {
+    background: #808d96;
+    border-bottom: 1px solid black;
+}
+
+.un_avis_a_gerer {
+    padding: 2%;
+    border-bottom: 1px solid grey;
+    display: inline-block;
+    width: 95%;
+    margin-bottom: 2%;
+}
+
+.un_avis_a_gerer p {
+    display: inline-block;
+}
+
+.btn_invalid_avis, .btn_revalid_avis {
+    text-align: center;
+    margin: 2%;
+    padding: 1%
+}
+
+.btn_invalid_avis a {
+    color: red;
+}
+
+.btn_revalid_avis a {
+    color: green;
+}
+
+
+
+/*Pour TABLETTE et tel  */
+@media screen and (max-width: 800px) {
+
+    .champs_nomprenom,
+    .champs_email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .champs_email {
+        text-align: left;
+    }
+
+    h3,
+    .texte_page_vetements,
+    .laisser_avis {
+        width: 70%;
+    }
+
+    .btn_laisser_avis {
+        width: auto;
+    }
+
+    .introtxt_page_dechets,
+    .introtxt_page_marche,
+    .introtxt_page_MIF,
+    .introtxt_page_OD,
+    .introtxt_page_fav {
+        width: 70%;
+    }
+
+    .background_accueil a {
+        transform: scale(1);
+        transition: none;
+    }
+
+    .background_accueil a:hover {
+        transform: none;
+    }
+
+    .banniere_textile {
+        background-size: auto;
+        background-position: center;
+    }
+
+    .banniere_composte {
+        background-size: auto;
+        background-position: center;
+    }
+
+    .banniere_trimobile {
+        background-size: auto;
+        background-position: center;
+    }
+
+    .txt_cadre_co,
+    .txt_nvx_compte,
+    .txt_mdp_oublie,
+    .txt_changement_mdp {
+        width: 90%;
+    }
+
+    .section_bienvenue,
+    .titre_page_vetements,
+    .titre_page_dechets_paris,
+    .titre_page_marche_paris {
+        margin-top: 70px;
+    }
+
+    .cadre_ajouter_une_marque,
+    .cadre_sup_marque,
+    .cadre_gerer_users,
+    .cadre_gerer_avis {
+        width: 70%;
+    }
+
+    /*
+    menu BURGER
+    */
+
+    header {
+        height: 0px;
+        padding: 0px;
+        margin-bottom: 0;
+    }
+
+    .menu_burger_span {
+        width: 100%;
+        text-align: right;
+        height: 0;
+    }
+
+    .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-y: hidden;
+        transition: 0.4s;
+    }
+
+    .overlay-open {
+        height: 100%;
+    }
+
+    .overlay-content {
+        min-height: 100vh;
+        width: 75%;
+        margin-left: 25%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .overlay a {
+        display: block;
+        transition: 0.3s;
+    }
+
+    .open-close-btn {
+        position: relative;
+        left: 5px;
+        text-decoration: none;
+        z-index: 10;
+    }
+
+    #myNav {
+        background: rgba(0, 0, 0, .6);
+    }
+
+    /* Hamburger Icon */
+    #hamburger-icon {
+        display: inline-block;
+        width: 50px;
+        margin: 2% 7%;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+
+    #hamburger-icon span {
+        display: inline-block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: black;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        margin-top: 6px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+
+    /* Hamburger Lines  */
+
+    #hamburger-icon span:nth-child(1) {
+        top: 0px;
+    }
+
+    #hamburger-icon span:nth-child(2),
+    #hamburger-icon span:nth-child(3) {
+        top: 13px;
+    }
+
+    #hamburger-icon span:nth-child(4) {
+        top: 26px;
+    }
+
+    #hamburger-icon.hamburger-open span {
+        background: black;
+        /* margin-left: 2%; */
+    }
+
+    #hamburger-icon.hamburger-open span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+
+    #hamburger-icon.hamburger-open span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #hamburger-icon.hamburger-open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    #hamburger-icon.hamburger-open span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .overlay {
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .front,
+    .back {
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+
+    .front a,
+    .back a {
+        flex-direction: column;
+    }
+
+    .front a {
+        padding: 5%;
+        width: 65%;
+    }
+
+    .back a,
+    .back button {
+        padding: 2%;
+        text-align: left;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
+}
+
+/*seulement pour tel*/
+@media screen and (max-width: 570px) {
+    h2 {
+        width: 70%;
+    }
+
+    h3,
+    .texte_page_vetements,
+    .laisser_avis {
+        width: 80%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        padding: 2%;
+        margin-bottom: 10%;
+        margin-top: 15%;
+    }
+
+    .text_section_contact {
+        padding: 6%;
+    }
+
+    .champs_nomprenom_email {
+        flex-direction: column;
+    }
+
+    .champs_nomprenom {
+        margin-right: 0;
+    }
+
+    .champs_email {
+        margin-left: 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .btn_checkbox_filtre {
+        flex-direction: column;
+    }
+
+    .visible {
+        width: auto;
+    }
+
+    .champs_email_mdp {
+        flex-direction: column;
+    }
+
+    .all_mail_nvx_compte,
+    .all_mdp_nvx_compte,
+    .all_mdp_nvx_mdp {
+        flex-direction: column;
+    }
+
+    .btn_page-admin {
+        flex-direction: column;
+    }
+
+    .cadre_ajouter_une_marque,
+    .cadre_sup_marque,
+    .cadre_gerer_users,
+    .cadre_gerer_avis {
+        width: 85%;
+    }
+
+    #carte {
+        width: 90%;
+    }
+
+    .avis_dela_marque {
+        border: white solid 5px;
+        margin: 100px 3%;
+    }
+
+
+}
